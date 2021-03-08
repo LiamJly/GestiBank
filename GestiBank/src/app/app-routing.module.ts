@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'conversion-page',
+    loadChildren: () => import('./conversion-page/conversion-page.module').then( m => m.ConversionPagePageModule)
+  },
+  {
+    path: 'creation-page',
+    loadChildren: () => import('./creation-page/creation-page.module').then( m => m.CreationPagePageModule)
+  },
 ];
 
 @NgModule({
