@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'connexion-page',
+    loadChildren: () => import('./connexion-page/connexion-page.module').then( m => m.ConnexionPagePageModule)
   },
+
 ];
 
 @NgModule({

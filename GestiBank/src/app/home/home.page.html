@@ -1,20 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> My Gesytibank </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Gestibank</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-img src="../assets/GestiBank_4.png"></ion-img>
+      </ion-thumbnail>
+    </ion-item>
+
+    <ion-button expand="block" (click)="toNewCompte()" color="favorite">Nouveau Compte</ion-button>
+    <ion-button expand="block" (click)="toNewConnexion()" color="favorite">Connexion</ion-button>
+    <ion-button expand="block" (click)="toConversion()" color="favorite">Conversion</ion-button>
+    <br />
+    <ion-item>BINVENUE SUR GESTIBANK</ion-item>
   </div>
 </ion-content>
