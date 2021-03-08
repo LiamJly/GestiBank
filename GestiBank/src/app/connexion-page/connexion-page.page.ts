@@ -46,4 +46,4 @@ export class ConnexionPagePage implements OnInit {
     toast.present();
   }
 }
->>>>>>> c562e191f83d4febcf0d37ebf8fea6b55faa7405
+
