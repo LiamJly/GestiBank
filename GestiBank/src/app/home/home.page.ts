@@ -15,7 +15,11 @@ export class HomePage implements OnInit {
     this.router.navigate(['/connexion-page']);
   }
 
-  toNewCompte() {}
+  toNewCompte() {
+    this.router.navigate(['/creation-page']);
+  }
 
-  toConversion() {}
+  toConversion() {
+    this.router.navigate(['/conversion-page']);
+  }
 }

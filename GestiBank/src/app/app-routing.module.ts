@@ -4,20 +4,34 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomePageModule),
   },
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'conversion-page',
-    loadChildren: () => import('./conversion-page/conversion-page.module').then( m => m.ConversionPagePageModule)
+    loadChildren: () =>
+      import('./conversion-page/conversion-page.module').then(
+        (m) => m.ConversionPagePageModule
+      ),
+  },
+  {
+    path: 'connexion-page',
+    loadChildren: () =>
+      import('./connexion-page/connexion-page.module').then(
+        (m) => m.ConnexionPagePageModule
+      ),
   },
   {
     path: 'creation-page',
-    loadChildren: () => import('./creation-page/creation-page.module').then( m => m.CreationPagePageModule)
+    loadChildren: () =>
+      import('./creation-page/creation-page.module').then(
+        (m) => m.CreationPagePageModule
+      ),
   },
 ];
 

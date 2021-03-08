@@ -13,17 +13,17 @@
 
   <div id="container">
     <ion-list>
-    <ion-item style="align-items: center;">
-      <ion-thumbnail slot="start">
-        <ion-img src="../assets/GestiBank_4.png"></ion-img>
-      </ion-thumbnail>
-    </ion-item>
-
-    <ion-button expand="block" (click)="toNewCompte()" color="favorite">Nouveau Compte</ion-button>
-    <ion-button expand="block" (click)="toNewConnexion()" color="favorite">Connexion</ion-button>
-    <ion-button expand="block" (click)="toConversion()" color="favorite">Conversion</ion-button>
-    <br />
-    <ion-item style="color:favorite">BINVENUE SUR GESTIBANK</ion-item>
+      
+        <ion-img src="../assets/GestiBank_4.png" style="width: 25%; margin:auto;"></ion-img>
+      
+      <br />
+      <ion-list >
+        <ion-button expand="block" (click)="toNewCompte()" color="favorite" >Nouveau Compte</ion-button>
+        <ion-button expand="block" (click)="toNewConnexion()" color="favorite">Connexion</ion-button>
+        <ion-button expand="block" (click)="toConversion()" color="favorite">Conversion</ion-button>
+      </ion-list>
+      <br />
+      <ion-text style="color: #065C32; margin: 50px;"><h2>BIENVENUE SUR GESTIBANK</h2></ion-text >
     </ion-list>
   </div>
 </ion-content>
