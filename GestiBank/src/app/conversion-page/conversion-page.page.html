@@ -1,20 +1,43 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>conversionPage</ion-title>
+    <ion-title>Conversion</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <h1>Main Content</h1>
-    <form (ngSubmit)="logForm()">
-      <ion-item>
-        <ion-label>Prénom</ion-label>
-        <ion-input type="text" [(ngModel)]="form.prenom" name="Prenom"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Nom</ion-label>
-        <ion-textarea [(ngModel)]="form.nom" name="Nom"></ion-textarea>
-      </ion-item>
-      <button ion-button type="submit" block>Créer compte</button>
-    </form>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle style="font-weight: bold; color:#065C32;">Convertisseur</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p style="font-weight: bold; color:#065C32;">Montant</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-input></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+            <p style="font-weight: bold; color:#065C32;">De</p>
+            </ion-col>
+            <ion-col>
+              <p style="font-weight: bold; color:#065C32;">Vers</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+            <ion-input></ion-input>
+            </ion-col>
+            <ion-col>
+            <ion-input></ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
   </ion-content>
