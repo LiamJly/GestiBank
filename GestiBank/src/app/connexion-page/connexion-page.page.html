@@ -10,11 +10,11 @@
   <ion-card>
   <ion-item style="margin: auto;">
     <ion-icon name="person-circle-outline"></ion-icon> 
-    <ion-input value="email" [(ngModel)]="email"></ion-input> 
+    <ion-input type="text" [(ngModel)]="email"></ion-input> 
   </ion-item>
   <ion-item style="margin: auto;">
     <ion-icon name="lock-closed-outline"></ion-icon>
-    <ion-input value="morpass" type="password" [(ngModel)]="motpass"></ion-input> 
+    <ion-input  type="password" [(ngModel)]="motpass"></ion-input> 
   </ion-item>
   <ion-button expand="block" (click)="seConnecter()" color="favorite">Connexion</ion-button>
 </ion-card>

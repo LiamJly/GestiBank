@@ -9,18 +9,27 @@ import { UserService } from '../services/user.service';
 export class ConnexionPagePage implements OnInit {
   private email: string;
   private motpass: number;
-  myLogger;
+  myLogger ;
 
   constructor(private user: UserService) { 
 
   }
 
   ngOnInit() {
-    this.myLogger = this.user.getUser(this.email);
+    //this.myLogger = this.user.getUser(this.email);
   }
 
   seConnecter(){
+    console.log("oui")
+    console.log(this.email);
+    this.user.getUser(this.email).subscribe((response) => {
+      this.myLogger = response;
       console.log(this.myLogger);
+    });
+  }
+
+  authent(){
+    
   }
 
 }
