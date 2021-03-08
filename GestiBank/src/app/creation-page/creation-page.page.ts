@@ -12,23 +12,28 @@ export class CreationPagePage implements OnInit {
   nom: string;
   prenom: string;
   email: string;
-  tel: string;
+  tel: number;
   myClient;
 
-  ngOnInit() {
+  ngOnInit() {}
+
+
+  envoyer(){
     this.myClient = {
       nom: this.nom,
       prenom: this.prenom,
       email: this.email,
       tel: this.tel,
-      status: "en attente",
-      motpass: "2020"                 //implementer un generateur
+      role:"client",
+      status: 'en attente',
+      motpass: this.client.genPass(), //implementer un generateur
     };
-  }
-
-
-  envoyer(){
-      if(this.nom!="" && this.prenom!="" && this.email!="" && this.tel)
-      this.client.addClient(this.client).subscribe();
+    
+    if(this.nom!="" && this.prenom!="" && this.email!="" && this.tel!=null  ){
+        console.log(this.myClient);
+        this.client.addClient(this.myClient).subscribe();
+    }else{
+        console.log("TOAST A IMPLEMENTER : REMPLIR TOUT LES CHAMPS!")
+    }
   }
 }
