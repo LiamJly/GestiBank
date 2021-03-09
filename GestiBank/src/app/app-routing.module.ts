@@ -52,6 +52,10 @@ const routes: Routes = [
     path: 'list-agents',
     loadChildren: () => import('./list-agents/list-agents.module').then( m => m.ListAgentsPageModule)
   },
+  {
+    path: 'agent-to-client',
+    loadChildren: () => import('./agent-to-client/agent-to-client.module').then( m => m.AgentToClientPageModule)
+  },
 
 
 ];
