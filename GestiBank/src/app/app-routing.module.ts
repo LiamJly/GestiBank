@@ -48,7 +48,11 @@ const routes: Routes = [
     path: 'admin-page',
     loadChildren: () => import('./admin-page/admin-page.module').then( m => m.AdminPagePageModule)
 
+  },  {
+    path: 'list-agents',
+    loadChildren: () => import('./list-agents/list-agents.module').then( m => m.ListAgentsPageModule)
   },
+
 
 ];
 
