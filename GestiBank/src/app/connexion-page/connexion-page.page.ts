@@ -71,7 +71,7 @@ export class ConnexionPagePage implements OnInit {
   }
 
   toAgentPage() {
-    this.router.navigate(['/agent-page']);
+    this.router.navigate(['/espace-agent']);
   }
 }
 
