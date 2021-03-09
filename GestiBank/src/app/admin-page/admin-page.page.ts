@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-page',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-page.page.scss'],
 })
 export class AdminPagePage implements OnInit {
+  constructor(private router : Router) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  toListAgent() {
+    this.router.navigate(['/list-agent']);
   }
-
 }
