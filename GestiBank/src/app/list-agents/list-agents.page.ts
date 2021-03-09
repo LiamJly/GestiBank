@@ -19,7 +19,13 @@ mesAgents;
       (res)=>{
        // console.log(res);
         this.mesAgents = res;
-        console.log(this.mesAgents);
+      }
+    )
+  }
+  delAgent(matricule){
+    this.agent.deleteAgent(matricule).subscribe(
+      res=>{
+        this.displayAgents();
       }
     )
   }

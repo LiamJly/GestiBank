@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>ListAgents</ion-title>
+    <ion-title>Liste des agents</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -34,6 +34,6 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-button color="danger">Supprimer</ion-button>
+  <ion-button color="danger" (click)="delAgent(i.matricule)">Supprimer</ion-button>
 </ion-card>
 </ion-content>
