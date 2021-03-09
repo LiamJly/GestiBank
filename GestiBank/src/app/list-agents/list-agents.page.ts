@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AgentService } from '../services/agent.service';
 
 @Component({
   selector: 'app-list-agents',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-agents.page.scss'],
 })
 export class ListAgentsPage implements OnInit {
-
-  constructor() { }
+mesAgents;
+  constructor(private agent: AgentService) { }
 
   ngOnInit() {
+    this.displayAgents(); 
   }
 
+  displayAgents(){
+    this.agent.getAgents().subscribe(
+      (res)=>{
+       // console.log(res);
+        this.mesAgents = res;
+        console.log(this.mesAgents);
+      }
+    )
+  }
 }
