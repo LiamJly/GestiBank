@@ -5,14 +5,14 @@
 </ion-header>
 
 <ion-content>
-<ion-card>
+<ion-card *ngFor="let i of mesAgents">
   <ion-grid>
     <ion-row>
       <ion-col>
         <ion-text> Nom:</ion-text>
       </ion-col>
       <ion-col>
-        <ion-text> Name </ion-text>
+        <ion-text >{{i.nom}}</ion-text>
       </ion-col>
     </ion-row>
 
@@ -21,7 +21,7 @@
         <ion-text> Prénom:</ion-text>
       </ion-col>
       <ion-col>
-        <ion-text>first name</ion-text>
+        <ion-text>{{i.prenom}}</ion-text>
       </ion-col>
     </ion-row>
 
@@ -30,7 +30,7 @@
         <ion-text>Matricule:</ion-text>
       </ion-col>
       <ion-col>
-        <ion-text>007</ion-text>
+        <ion-text>{{i.matricule}}</ion-text>
       </ion-col>
     </ion-row>
   </ion-grid>
