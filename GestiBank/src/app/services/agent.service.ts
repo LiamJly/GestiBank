@@ -12,6 +12,6 @@ public getAgents(){
   return this.http.get(`${this.baseurl}agent/list`)
 }
 public deleteAgent(){
-  return this.http.delete
+  //return this.http.delete
 }
 }

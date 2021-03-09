@@ -16,6 +16,7 @@ export class CreationPagePage implements OnInit {
   tel: number;
   myClient;
   validation;
+  value;
 
   ngOnInit() {
     this.validation= "favorite"
@@ -31,6 +32,7 @@ export class CreationPagePage implements OnInit {
       role: 'client',
       status: 'en attente',
       motpass: this.client.genPass(), 
+      compte: this.value
     };
     
     if (

@@ -7,11 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-page.page.scss'],
 })
 export class AdminPagePage implements OnInit {
-  constructor(private router : Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
   toListAgent() {
     this.router.navigate(['/list-agents']);
   }
+
+  agentToClient(){
+    this.router.navigate(['/agent-to-client']);
+  }
+
+  
 }
