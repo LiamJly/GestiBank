@@ -7,10 +7,33 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
   baseurl: string = 'http://localhost:85/';
+  private loggerNom: string = '';
+  private loggerPrenom: string = '';
 
   constructor(private http: HttpClient) {}
 
-  public getUser(email:string) {
-    return this.http.get(this.baseurl+"user/"+email+"/");
+  public getUser(email: string) {
+    return this.http.get(this.baseurl + 'user/' + email + '/');
+  }
+
+  tologgout() {
+    this.setName("")
+    this.setPrenom("")
+  }
+
+  getName() {
+    return this.loggerNom;
+  }
+
+  setName(nomInput: string) {
+    this.loggerNom = nomInput;
+  }
+
+  getPrenom() {
+    return this.loggerPrenom;
+  }
+
+  setPrenom(prenomInput: string) {
+    this.loggerPrenom = prenomInput;
   }
 }

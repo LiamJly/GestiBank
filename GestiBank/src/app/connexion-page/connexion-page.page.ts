@@ -37,7 +37,7 @@ export class ConnexionPagePage implements OnInit {
       console.log('connexion a la page  ' + logger.role.toUpperCase());
       this.email = '';
       this.motpass = null;
-      switch (logger.motpass) {
+      switch (logger.role) {
         case 'admin':
           this.toAdminPage();
           break;
@@ -71,7 +71,7 @@ export class ConnexionPagePage implements OnInit {
   }
 
   toAgentPage() {
-    this.router.navigate(['/agent-page']);
+    this.router.navigate(['/espace-agent']);
   }
 }
 
