@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-import { HttpClient } from '@angular/common/http';
+
+
 import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root',
-})
-export class ClientService {
-  baseurl: string = 'http://localhost:85/';
-
-  constructor(private http: HttpClient) {}
-
-  public addClient(client: any) {
-    return this.http.post(this.baseurl+'client/add/', client);
-  }
-}
-=======
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -47,4 +32,3 @@ export class ClientService {
         return(this.valeur);
   }
 }
->>>>>>> c562e191f83d4febcf0d37ebf8fea6b55faa7405
