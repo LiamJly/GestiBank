@@ -10,12 +10,17 @@ export class ClientService {
 
   valeur: string = '';
   rand;
-  alphabet: string ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12345678910';
+  alphabet: string =
+    'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12345678910';
 
   constructor(private http: HttpClient) {}
 
   public addClient(client: any) {
     return this.http.post(this.baseurl + 'client/add/', client);
+  }
+
+  public getClient() {
+    return this.http.get(this.baseurl + 'client/list/');
   }
 
   public genPass() {
