@@ -32,7 +32,11 @@ const routes: Routes = [
       import('./creation-page/creation-page.module').then(
         (m) => m.CreationPagePageModule
       ),
+  },  {
+    path: 'espace-agent',
+    loadChildren: () => import('./espace-agent/espace-agent.module').then( m => m.EspaceAgentPageModule)
   },
+
 ];
 
 @NgModule({
