@@ -1,9 +1,40 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>adminPage</ion-title>
-  </ion-toolbar>
+  </ion-toolbar> 
 </ion-header>
 
 <ion-content>
+  <div id="container">
+    <ion-list>
+      <ion-grid >
+        <ion-row>
+          <ion-col><ion-img src="../assets/GestiBank_4.png" style="width: 15%;"></ion-img></ion-col>   
+        </ion-row>
+      </ion-grid>
 
+      <ion-list size="large">
+             <div>
+              <h3 color=#065C32 style="text-align: center;" >  mon titre </h3>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+            <ion-button expand="block" (click)="toListAgent()" color="favorite" >Liste Agent</ion-button>
+            <ion-button expand="block" (click)="toAddAgent()" color="favorite">Ajouter Agent</ion-button>
+            <ion-button expand="block" (click)="agentToClient()" color="favorite">Affecter Agent</ion-button>
+            <br>
+            <br>
+            <br>
+           
+             
+             <br>
+            <ion-button expand="block"  shape="round" color="danger" size="small" style="width: 25%;">
+              <ion-icon name="log-out-outline" style=" font-size: 24px; " (click)="deconnexion()"></ion-icon>
+            </ion-button>
+          </ion-list>
+     
+    </ion-list>
+  </div>
 </ion-content>
