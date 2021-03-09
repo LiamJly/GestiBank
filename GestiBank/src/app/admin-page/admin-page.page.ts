@@ -12,6 +12,6 @@ export class AdminPagePage implements OnInit {
   ngOnInit() {}
 
   toListAgent() {
-    this.router.navigate(['/list-agent']);
+    this.router.navigate(['/list-agents']);
   }
 }
