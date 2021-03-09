@@ -32,9 +32,22 @@ const routes: Routes = [
       import('./creation-page/creation-page.module').then(
         (m) => m.CreationPagePageModule
       ),
-  },  {
+  },
+  {
+
     path: 'espace-agent',
     loadChildren: () => import('./espace-agent/espace-agent.module').then( m => m.EspaceAgentPageModule)
+  },
+  
+  {
+    path: 'client-page',
+    loadChildren: () => import('./client-page/client-page.module').then( m => m.ClientPagePageModule)
+  },
+
+  {
+    path: 'admin-page',
+    loadChildren: () => import('./admin-page/admin-page.module').then( m => m.AdminPagePageModule)
+
   },
 
 ];

@@ -10,8 +10,7 @@ export class ClientService {
 
   valeur: string = '';
   rand;
-  alphabet: string =
-    'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12345678910';
+  alphabet: string ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12345678910';
 
   constructor(private http: HttpClient) {}
 
