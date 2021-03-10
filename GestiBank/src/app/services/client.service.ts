@@ -42,4 +42,16 @@ export class ClientService {
     }
     return this.valeur;
   }
+
+  public getClientbyMail(mail: string){
+    return this.http.get(`${this.baseurl}/client/attente/${mail}`)
+  }
+
+  public getClientAttente(){
+    return this.http.get(`${this.baseurl}client/list/attente`)
+  }
+
+  public updateClient(mail: string, body){
+    return this.http.put(`${this.baseurl}client/${mail}`, body)
+  }
 }

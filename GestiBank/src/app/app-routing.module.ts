@@ -56,6 +56,14 @@ const routes: Routes = [
     path: 'agent-to-client',
     loadChildren: () => import('./agent-to-client/agent-to-client.module').then( m => m.AgentToClientPageModule)
   },
+  {
+    path: 'client-mail',
+    loadChildren: () => import('./client-mail/client-mail.module').then( m => m.ClientMailPageModule)
+  },
+  {
+    path: 'demandes-page',
+    loadChildren: () => import('./demandes-page/demandes-page.module').then( m => m.DemandesPagePageModule)
+  },
 
 
 ];

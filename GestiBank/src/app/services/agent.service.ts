@@ -5,13 +5,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AgentService {
 baseurl: string = "http://localhost:85/";
+
   
 constructor(private http: HttpClient) { }
 
 public getAgents(){
   return this.http.get(`${this.baseurl}agent/list`)
 }
-public deleteAgent(){
-  //return this.http.delete
+public deleteAgent(matricule: string){
+   return this.http.delete(`${this.baseurl}agent/${matricule}`)
 }
+
 }
