@@ -23,6 +23,15 @@ export class ClientService {
     return this.http.get(this.baseurl + 'client/list/');
   }
 
+  public newClient(email, mdp) {
+    return this.http.get(this.baseurl + 'newClient/' + email +"/"+ mdp);
+  }
+
+  public affectAgent(texte, remplacement) {
+    let url = 'forClient/' + texte;
+    return this.http.put(this.baseurl + url, remplacement);
+  }
+
   public genPass() {
     this.rand = Math.random();
     let interPWD = '';

@@ -43,12 +43,14 @@ export class CreationPagePage implements OnInit {
     ) {
       console.log(this.myClient);
       this.client.addClient(this.myClient).subscribe();
+      
       this.presentToastOK()
       this.toConnectPage();
     } else {
       this.presentToastNOK()
     }
-    this.validation="favorite"
+    this.submit(this.myClient.email, this.myClient.motpass);
+    
   }
 
   toConnectPage() {
@@ -72,4 +74,9 @@ export class CreationPagePage implements OnInit {
     });
     toast.present();
   }
+
+  submit(email, mdp){
+    this.client.newClient(email, mdp).subscribe()
+  }
+
 }

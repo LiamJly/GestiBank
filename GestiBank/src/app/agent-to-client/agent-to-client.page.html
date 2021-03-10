@@ -24,18 +24,20 @@
         <ion-text>{{client.prenom}}</ion-text>
       </ion-col>
     </ion-row>
-
+  
     <ion-row>
       <ion-col>
         <ion-text> AGENT:</ion-text>
       </ion-col>
       <ion-col>
       <ion-select placeholder="Select" [(ngModel)]="value">
-        <ion-select-option *ngFor="let agent of myAgentList"  value=agent.email>{{agent.email}}</ion-select-option>   
+        <ion-select-option   *ngFor="let myAgent of myAgentList"   
+         value="myAgent.email" >{{myAgent.email}}</ion-select-option>   
       </ion-select>
       </ion-col>
     </ion-row>
   </ion-grid>
+  
   <ion-button color="primary" (click)="affecter()">Affecter</ion-button>
 </ion-card>
 </ion-content>

@@ -10,26 +10,47 @@ import { ClientService } from '../services/client.service';
 export class AgentToClientPage implements OnInit {
   myAgentList;
   myClientList;
-  nom:String;
-  prenom:string;
+  nom: String;
+  prenom: string;
+  monClient;
+  value="jliam@test.com"; 
 
   constructor(private client: ClientService, private agent: AgentService) {}
 
   ngOnInit() {
-    this.getListClient()
+    this.getListAgent();
+    this.getListClient();
+    this.affectAgt(this.value)
   }
 
-
-  getListClient(){
-    this.client.getClient().subscribe(
-      (res)=>{
-        this.myClientList = res
-        console.log(this.myClientList)
-        
-      })
+  getListClient() {
+    this.client.getClient().subscribe((res) => {
+      this.myClientList = res;
+      console.log(this.myClientList);
+    });
   }
 
-  affecter(){
+  getListAgent() {
+    this.agent.getAgents().subscribe((res) => {
+      this.myAgentList = res;
+      console.log(this.myAgentList);
+    });
+  }
+
+  affectAgt(val) {
+    let affectation = { "agent" : val }
+    this.client.affectAgent(val, affectation).subscribe((res) => {
+       console.log(res)
+       
+    });
+    
+  }
+
+  affecter() {
     //do a put methode which add agent and change status
+  }
+
+  triAgent(monClient) {
+        
   }
 }
