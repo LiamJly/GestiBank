@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Demande de comptes en attente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let i of mesDemandes">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text> Nom:</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text >{{i.nom}}</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text> Prénom:</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{i.prenom}}</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text>Mail</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{i.email}}</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text>Compte</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{i.compte}}</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button (click)="validateDemande(i.email)">Valider</ion-button>
+</ion-card>
+</ion-content>
