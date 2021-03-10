@@ -9,6 +9,7 @@ export class UserService {
   baseurl: string = 'http://localhost:85/';
   private loggerNom: string = '';
   private loggerPrenom: string = '';
+  private loggerLogin: string = '';
 
   constructor(private http: HttpClient) {}
 
@@ -17,9 +18,12 @@ export class UserService {
   }
 
   tologgout() {
-    this.setName("")
-    this.setPrenom("")
+    this.setLogin('');
+    this.setName('');
+    this.setPrenom('');
   }
+
+
 
   getName() {
     return this.loggerNom;
@@ -35,5 +39,13 @@ export class UserService {
 
   setPrenom(prenomInput: string) {
     this.loggerPrenom = prenomInput;
+  }
+
+  getLogin() {
+    return this.loggerLogin;
+  }
+
+  setLogin(loginInput: string) {
+    this.loggerLogin = loginInput;
   }
 }

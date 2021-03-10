@@ -6,6 +6,8 @@
 
 <ion-content>
 <ion-card *ngFor="let client of myClientList">
+  <form #form="ngForm" (ngSubmit)="affecter(form,client.email)">
+
   <ion-grid >
     <ion-row>
       <ion-col>
@@ -30,14 +32,15 @@
         <ion-text> AGENT:</ion-text>
       </ion-col>
       <ion-col>
-      <ion-select placeholder="Select" [(ngModel)]="value">
-        <ion-select-option   *ngFor="let myAgent of myAgentList"   
-         value="myAgent.email" >{{myAgent.email}}</ion-select-option>   
+      <ion-select placeholder="Select" ngModel name="agentRemplacement">
+        <ion-select-option  *ngFor="let myAgent of myAgentList"   
+         [value]="myAgent.email" >{{myAgent.email}}</ion-select-option>   
       </ion-select>
       </ion-col>
     </ion-row>
   </ion-grid>
   
-  <ion-button color="primary" (click)="affecter()">Affecter</ion-button>
+  <ion-button color="primary" type="submit">Affecter</ion-button>
+  </form>
 </ion-card>
 </ion-content>

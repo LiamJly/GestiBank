@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { AgentService } from '../services/agent.service';
 import { ClientService } from '../services/client.service';
 
@@ -13,14 +14,15 @@ export class AgentToClientPage implements OnInit {
   nom: String;
   prenom: string;
   monClient;
-  value="jliam@test.com"; 
+  agentRemplacement; 
+  
 
   constructor(private client: ClientService, private agent: AgentService) {}
 
   ngOnInit() {
     this.getListAgent();
     this.getListClient();
-    this.affectAgt(this.value)
+    //this.affectAgt(this.value)
   }
 
   getListClient() {
@@ -38,7 +40,7 @@ export class AgentToClientPage implements OnInit {
   }
 
   affectAgt(val) {
-    let affectation = { "agent" : val }
+    let affectation = { "agent" : this.agentRemplacement }
     this.client.affectAgent(val, affectation).subscribe((res) => {
        console.log(res)
        
@@ -46,11 +48,13 @@ export class AgentToClientPage implements OnInit {
     
   }
 
-  affecter() {
-    //do a put methode which add agent and change status
+  affecter(form:NgForm,val) {
+    let affectation = { "agent" : form.value.agentRemplacement }
+    this.client.affectAgent(val, affectation).subscribe((res) => {
+       console.log(res)
+    });
+    
   }
 
-  triAgent(monClient) {
-        
-  }
+  
 }

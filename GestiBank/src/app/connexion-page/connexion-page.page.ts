@@ -12,6 +12,7 @@ export class ConnexionPagePage implements OnInit {
   private email: string;
   private motpass: number;
   myLogger;
+  
 
   constructor(
     private user: UserService,
@@ -27,6 +28,9 @@ export class ConnexionPagePage implements OnInit {
       this.myLogger = response;
       console.log(this.myLogger);
       console.log(this.myLogger[0].motpass);
+      this.user.setLogin(this.myLogger[0].email);
+      this.user.setName(this.myLogger[0].nom);
+      this.user.setPrenom(this.myLogger[0].prenom)
       this.authent(this.myLogger[0]);
     });
   }

@@ -27,9 +27,9 @@ export class ClientService {
     return this.http.get(this.baseurl + 'newClient/' + email +"/"+ mdp);
   }
 
-  public affectAgent(texte, remplacement) {
-    let url = 'forClient/' + texte;
-    return this.http.put(this.baseurl + url, remplacement);
+  public affectAgent(emailClient, addAgentEmail) {
+    let url = 'forClient/' + emailClient;
+    return this.http.put(this.baseurl + url, addAgentEmail);
   }
 
   public genPass() {

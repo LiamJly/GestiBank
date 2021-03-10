@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-admin-page',
@@ -7,9 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-page.page.scss'],
 })
 export class AdminPagePage implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private user: UserService) {}
+  mLOG
+  logIN = this.user
 
-  ngOnInit() {}
+  ngOnInit() {
+   this.mLOG = this.logIN.getPrenom() +' '+ this.logIN.getName().toUpperCase()
+  }
 
   toListAgent() {
     this.router.navigate(['/list-agents']);
@@ -18,6 +23,7 @@ export class AdminPagePage implements OnInit {
   agentToClient(){
     this.router.navigate(['/agent-to-client']);
   }
+
 
   
 }
