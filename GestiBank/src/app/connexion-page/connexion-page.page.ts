@@ -30,7 +30,8 @@ export class ConnexionPagePage implements OnInit {
       console.log(this.myLogger[0].motpass);
       this.user.setLogin(this.myLogger[0].email);
       this.user.setName(this.myLogger[0].nom);
-      this.user.setPrenom(this.myLogger[0].prenom)
+      this.user.setPrenom(this.myLogger[0].prenom);
+      this.user.setRole(this.myLogger[0].role);
       this.authent(this.myLogger[0]);
     });
   }

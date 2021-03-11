@@ -7,21 +7,34 @@
 
   <div id="container">
     <ion-list>
+      <ion-grid >
+        <ion-row>
+          <ion-col>
+          <ion-text style="color:#065C32; text-align: center; font-weight: bold;">Bienvenue dans votre espace, {{mLOG}}</ion-text>
+          </ion-col>  
+        </ion-row>
+      </ion-grid>
+
+      <ion-list>
       
         <ion-img src="../assets/GestiBank_4.png" style="width: 25%; margin:auto;"></ion-img>
       
-      <br />
-      <ion-list >
-        <ion-button expand="block"  color="favorite" (click)="toDemandesPage()">Gérer demandes</ion-button>
-        <ion-button expand="block"  color="favorite">Gérer chequiers</ion-button>
-        <ion-button expand="block"  color="favorite">Changer mot de passe</ion-button>
+        <br />
+        <ion-list >
+          <ion-button expand="block"  color="favorite" (click)="toDemandesPage()">Gérer demandes</ion-button>
+          <ion-button expand="block"  color="favorite">Gérer chequiers</ion-button>
+          <ion-button expand="block"  color="favorite">Changer mot de passe</ion-button>
+        </ion-list>
+        <br />
       </ion-list>
-      <br />
+
+
+      <ion-button expand="block" (click)="deconnexion() shape="round" color="danger" size="small" style="width: 25%;">
+        <ion-icon name="log-out-outline" style=" font-size: 24px; " "></ion-icon>
+      </ion-button>
+
     </ion-list>
-
-
-    <ion-button expand="block"  shape="round" color="danger" size="small" style="width: 25%;">
-      <ion-icon name="log-out-outline" style=" font-size: 24px; " (click)="deconnexion()"></ion-icon>
-    </ion-button>
   </div>
+
+
 </ion-content>

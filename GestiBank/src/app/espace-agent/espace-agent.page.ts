@@ -10,16 +10,25 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./espace-agent.page.scss'],
 })
 export class EspaceAgentPage implements OnInit {
-  
-  constructor(private router: Router, private client: ClientService , private user: UserService) { }
+  constructor(
+    private router: Router,
+    private client: ClientService,
+    private user: UserService
+  ) {}
 
-  logIN = this.user
-  mLOG
+  logIN = this.user;
+  mLOG;
 
   ngOnInit() {
-    this.mLOG = this.logIN.getPrenom() + ' ' + this.logIN.getName().toUpperCase();
+    this.mLOG =
+      this.logIN.getPrenom() + ' ' + this.logIN.getName().toUpperCase();
   }
   toDemandesPage() {
     this.router.navigate(['/demandes-page']);
+  }
+
+  deconnexion() {
+    this.logIN.tologgout();
+    this.router.navigate(['/home']);
   }
 }

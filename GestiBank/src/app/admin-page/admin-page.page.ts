@@ -24,6 +24,9 @@ export class AdminPagePage implements OnInit {
     this.router.navigate(['/agent-to-client']);
   }
 
-
+  deconnexion(){
+    this.logIN.tologgout();
+    this.router.navigate(['/home']);
+  }
   
 }
