@@ -34,7 +34,7 @@
       <ion-col>
       <ion-select placeholder="Select" ngModel name="agentRemplacement">
         <ion-select-option  *ngFor="let myAgent of myAgentList"   
-         [value]="myAgent.email" >{{myAgent.email}}</ion-select-option>   
+         [value]="myAgent.email" >{{myAgent.nom}} {{myAgent.prenom}} </ion-select-option>   
       </ion-select>
       </ion-col>
     </ion-row>

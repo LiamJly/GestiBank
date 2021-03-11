@@ -22,9 +22,12 @@ export class ClientService {
   public getClient() {
     return this.http.get(this.baseurl + 'client/list/');
   }
+  public getClientNoAgent() {
+    return this.http.get(this.baseurl + 'client/noAgent/');
+  }
 
   public newClient(email, mdp) {
-    return this.http.get(this.baseurl + 'newClient/' + email +"/"+ mdp);
+    return this.http.get(this.baseurl + 'newClient/' + email + '/' + mdp);
   }
 
   public affectAgent(emailClient, addAgentEmail) {
@@ -43,15 +46,15 @@ export class ClientService {
     return this.valeur;
   }
 
-  public getClientbyMail(mail: string){
-    return this.http.get(`${this.baseurl}/client/attente/${mail}`)
+  public getClientbyMail(mail: string) {
+    return this.http.get(`${this.baseurl}/${mail}/clients `);
   }
 
-  public getClientAttente(){
-    return this.http.get(`${this.baseurl}client/list/attente`)
+  public getClientAttente() {
+    return this.http.get(`${this.baseurl}client/list/attente`);
   }
 
-  public updateClient(mail: string, body){
-    return this.http.put(`${this.baseurl}client/${mail}`, body)
+  public updateClient(mail: string, body) {
+    return this.http.put(`${this.baseurl}client/${mail}`, body);
   }
 }
