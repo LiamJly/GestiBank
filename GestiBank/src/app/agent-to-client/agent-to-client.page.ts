@@ -26,7 +26,7 @@ export class AgentToClientPage implements OnInit {
   }
 
   getListClient() {
-    this.client.getClient().subscribe((res) => {
+    this.client.getClientAttente().subscribe((res) => {
       this.myClientList = res;
       console.log(this.myClientList);
     });
@@ -50,11 +50,10 @@ export class AgentToClientPage implements OnInit {
 
   affecter(form:NgForm,val) {
     let affectation = { "agent" : form.value.agentRemplacement }
-    this.client.affectAgent(val, affectation).subscribe((res) => {
-       console.log(res)
-    });
-    
-  }
+    this.client.affectAgent(val, affectation).subscribe(
+      res=> this.getListClient()
+       
+    )}
 
   
 }
