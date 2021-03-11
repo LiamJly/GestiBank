@@ -10,6 +10,7 @@ export class UserService {
   private loggerNom: string = '';
   private loggerPrenom: string = '';
   private loggerLogin: string = '';
+  private loggerRole: string = '';
 
   constructor(private http: HttpClient) {}
 
@@ -21,9 +22,16 @@ export class UserService {
     this.setLogin('');
     this.setName('');
     this.setPrenom('');
+    this.setRole('');
   }
 
+  getRole() {
+    return this.loggerRole;
+  }
 
+  setRole(roleInput: string) {
+    this.loggerRole = roleInput;
+  }
 
   getName() {
     return this.loggerNom;
