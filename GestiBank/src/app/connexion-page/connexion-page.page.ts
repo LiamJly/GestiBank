@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 export class ConnexionPagePage implements OnInit {
   private email: string;
   private motpass: number;
-  myLogger;
   
 
   constructor(
@@ -20,7 +19,12 @@ export class ConnexionPagePage implements OnInit {
     private router: Router,
   ) {}
 
-  ngOnInit() {}
+  myLogger;
+  logUser 
+
+  ngOnInit() {
+    this.logUser = this.user;
+  }
 
   seConnecter() {
     console.log(this.email);
@@ -28,10 +32,10 @@ export class ConnexionPagePage implements OnInit {
       this.myLogger = response;
       console.log(this.myLogger);
       console.log(this.myLogger[0].motpass);
-      this.user.setLogin(this.myLogger[0].email);
-      this.user.setName(this.myLogger[0].nom);
-      this.user.setPrenom(this.myLogger[0].prenom);
-      this.user.setRole(this.myLogger[0].role);
+      this.logUser.setLogin(this.myLogger[0].email);
+      this.logUser.setName(this.myLogger[0].nom);
+      this.logUser.setPrenom(this.myLogger[0].prenom);
+      this.logUser.setRole(this.myLogger[0].role);
       this.authent(this.myLogger[0]);
     });
   }

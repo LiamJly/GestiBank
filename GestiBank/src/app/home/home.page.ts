@@ -11,10 +11,11 @@ export class HomePage implements OnInit {
   constructor(private router: Router, private user: UserService) {}
 
   mLOG;
-  logIN = this.user;
+  logIN;
   role;
 
   ngOnInit() {
+    this.logIN = this.user;
     this.mLOG =
       this.logIN.getPrenom() + '  ' + this.logIN.getName().toUpperCase();
     this.role = this.logIN.getRole;

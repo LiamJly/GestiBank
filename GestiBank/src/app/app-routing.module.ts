@@ -64,6 +64,10 @@ const routes: Routes = [
     path: 'demandes-page',
     loadChildren: () => import('./demandes-page/demandes-page.module').then( m => m.DemandesPagePageModule)
   },
+  {
+    path: 'gerer-chequier',
+    loadChildren: () => import('./gerer-chequier/gerer-chequier.module').then( m => m.GererChequierPageModule)
+  },
 
 
 ];
