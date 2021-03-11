@@ -22,10 +22,14 @@ export class EspaceAgentPage implements OnInit {
   ngOnInit() {
     this.mLOG =
       this.logIN.getPrenom() + ' ' + this.logIN.getName().toUpperCase();
-      
+
   }
   toDemandesPage() {
     this.router.navigate(['/demandes-page']);
+  }
+
+  toGererChequier(){
+    this.router.navigate(['/gerer-chequier']);
   }
 
   deconnexion() {

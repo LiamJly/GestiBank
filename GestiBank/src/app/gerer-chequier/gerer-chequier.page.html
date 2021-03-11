@@ -1,9 +1,51 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>gererChequier</ion-title>
+    <ion-title style="text-align: center; color: #065C32;">Valider les demandes de chequiers</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<ion-card *ngFor="let d of decisions">
+  <form #form="ngForm" (ngSubmit)="sendDecision(form,d.email)">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text> Nom:</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text >{{d.nom}}</ion-text>
+      </ion-col>
+    </ion-row>
 
+    <ion-row>
+      <ion-col>
+        <ion-text> Prénom:</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{d.prenom}}</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text>Mail</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{d.email}}</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text>Compte</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{d.compte}}</ion-text>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <ion-button (click)="submit">Valider</ion-button>
+  </form>
+</ion-card>
 </ion-content>
