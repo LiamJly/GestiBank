@@ -17,7 +17,7 @@ public deleteAgent(matricule: string){
 }
 
 public getMyClients(email){
-  return this.http.get(`${this.baseurl}/${email}/clients`)
+  return this.http.get(this.baseurl + email + '/clients')
 }
 
 }

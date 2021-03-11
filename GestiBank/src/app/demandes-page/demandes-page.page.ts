@@ -23,7 +23,7 @@ mLOG
   }
 displayDemandes(){
   //this.client.getClientAttente().subscribe(
-    this.agent.getMyClients(this.logIN.getLogin()).subscribe(
+  this.agent.getMyClients(this.logIN.getLogin()).subscribe(
     (res)=>{
       // console.log(res);
        this.mesDemandes = res;
